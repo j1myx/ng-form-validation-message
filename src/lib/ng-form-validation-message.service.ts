@@ -136,7 +136,7 @@ export class NgFormValidationMessageService {
       }
 
     } else {
-      message = typeof err === 'string' ? err : JSON.stringify(err);
+      message = typeof err.value === 'string' ? err.value : JSON.stringify(err.value);
     }
 
     return message;
