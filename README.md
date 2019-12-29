@@ -1,4 +1,4 @@
-# Form Error Messages
+# Form Validation Messages
 
 This package simplifies the way to display validation error messages on forms.
 
