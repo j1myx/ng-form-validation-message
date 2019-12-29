@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  color: #f44336;
+}
+
+:host div {
+  padding: 5px 0;
+}

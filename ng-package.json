@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ngx-packagr/ngx-package.schema.json",
+  "dest": "../../dist/ng-form-validation-message",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}
