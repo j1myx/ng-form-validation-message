@@ -5,5 +5,8 @@
     "@angular/common": "^8.2.0",
     "@angular/core": "^8.2.0",
     "@angular/forms": "^8.2.0"
-  }
+  },
+  "author": "Jimy Navarro",
+  "repository": "https://github.com/j1myx/ng-form-validation-message",
+  "homepage": "https://github.com/j1myx/ng-form-validation-message"
 }
