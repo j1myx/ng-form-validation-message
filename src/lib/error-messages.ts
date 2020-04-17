@@ -40,7 +40,7 @@ const es = {
     rExp: 'max|actual'
   },
   required: {
-    message: '{etiqueta} no puede estar vacío.'
+    message: '{label} no puede estar vacío.'
   },
   requiredTrue: {
     message: '{label} debe ser verdadero.'
@@ -57,7 +57,7 @@ const es = {
     rExp: 'requiredLength|actualLength'
   },
   pattern: {
-    message: '{etiqueta} tiene un formato no válido.',
+    message: '{label} tiene un formato no válido.',
     rExp: 'requiredPattern|actualValue'
   }
 };
