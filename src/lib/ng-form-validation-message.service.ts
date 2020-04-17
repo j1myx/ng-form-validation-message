@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, LOCALE_ID } from '@angular/core';
 import { FormControl, ControlContainer, AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { ERROR_MESSAGES, DEFAULT_LABEL } from './tokens';
 
@@ -18,7 +18,8 @@ export class NgFormValidationMessageService {
   label: string;
 
   constructor(
-    @Inject(ERROR_MESSAGES) private messages,
+    @Inject(LOCALE_ID) private locale,
+    @Inject(ERROR_MESSAGES) private errorMessages,
     @Inject(DEFAULT_LABEL) private defaultLabel: string
   ) { }
 
@@ -118,7 +119,7 @@ export class NgFormValidationMessageService {
   private buildMessage(err: Error): string {
     let message = '';
 
-    const errorMessage = this.messages[err.name];
+    const errorMessage = this.getMessagesByLocale[err.name];
 
     if (errorMessage !== undefined) {
       message = errorMessage.message.replace(/{label}/g, this.label || this.defaultLabel);
@@ -140,6 +141,18 @@ export class NgFormValidationMessageService {
     }
 
     return message;
+  }
+
+  private get getMessagesByLocale() {
+
+    const errorMessage = this.errorMessages;
+
+    if (this.errorMessages[this.locale] === undefined) {
+      throw new Error('No existe soporte para el idioma. [LOCALE_ID]');
+    }
+
+    return errorMessage[this.locale];
+
   }
 
 }

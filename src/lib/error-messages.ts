@@ -1,4 +1,4 @@
-export const errorMessages = {
+const en = {
   min: {
     message: '{label} must not be less than {min}.',
     rExp: 'min|actual'
@@ -28,4 +28,41 @@ export const errorMessages = {
     message: '{label} has an invalid format.',
     rExp: 'requiredPattern|actualValue'
   }
+};
+
+const es = {
+  min: {
+    message: '{label} no debe ser menor a {min}.',
+    rExp: 'min|actual'
+  },
+  max: {
+    message: '{label} no debe ser mayor que {max}.',
+    rExp: 'max|actual'
+  },
+  required: {
+    message: '{etiqueta} no puede estar vacío.'
+  },
+  requiredTrue: {
+    message: '{label} debe ser verdadero.'
+  },
+  email: {
+    message: '{label} no es una dirección de correo electrónico válida.'
+  },
+  minlength: {
+    message: '{label} debe contener al menos {requiredLength} caracter(es).',
+    rExp: 'requiredLength|actualLength'
+  },
+  maxlength: {
+    message: '{label} debe contener como máximo {requiredLength} caracter(es).',
+    rExp: 'requiredLength|actualLength'
+  },
+  pattern: {
+    message: '{etiqueta} tiene un formato no válido.',
+    rExp: 'requiredPattern|actualValue'
+  }
+};
+
+export const errorMessages = {
+  en,
+  es
 };
